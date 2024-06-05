@@ -1,0 +1,1 @@
+{"sentiment_scores":{"compound":0.8687,"neg":0.0,"neu":0.868,"pos":0.132}}
