@@ -1,0 +1,7 @@
+speechbrain
+flask
+torchaudio
+torch
+torchvision
+nltk
+transformers

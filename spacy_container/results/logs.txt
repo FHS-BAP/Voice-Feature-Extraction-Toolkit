@@ -1,0 +1,110 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load .dockerignore
+#1 transferring context: 2B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 299B done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/python:3.9
+#3 DONE 0.8s
+
+#4 [1/6] FROM docker.io/library/python:3.9@sha256:5930d54604459569953a4164839ad9bb32f6a1c76e6740c84a116b4290a57852
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 6.58kB 0.0s done
+#5 DONE 0.0s
+
+#6 [2/6] WORKDIR /app
+#6 CACHED
+
+#7 [3/6] COPY requirements.txt .
+#7 CACHED
+
+#8 [4/6] RUN pip install --no-cache-dir -r requirements.txt
+#8 CACHED
+
+#9 [5/6] RUN python -m spacy download en_core_web_sm
+#9 CACHED
+
+#10 [6/6] COPY . .
+#10 DONE 0.1s
+
+#11 exporting to image
+#11 exporting layers 0.1s done
+#11 writing image sha256:edfb9661e9a3af715341ad10c28d6c6037f2e60b98198327cd7fc7f59777d7ad done
+#11 naming to docker.io/library/spacy-demo 0.0s done
+#11 DONE 0.1s
+
+What's Next?
+  View a summary of image vulnerabilities and recommendations → docker scout quickview
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.17.0.2:5000
+[33mPress CTRL+C to quit[0m
+172.17.0.1 - - [30/Apr/2024 22:36:31] "POST /dep_parse HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.17.0.2:5000
+[33mPress CTRL+C to quit[0m
+172.17.0.1 - - [30/Apr/2024 22:36:31] "POST /dep_parse HTTP/1.1" 200 -
+172.17.0.1 - - [30/Apr/2024 22:36:32] "POST /entity_linking HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.17.0.2:5000
+[33mPress CTRL+C to quit[0m
+172.17.0.1 - - [30/Apr/2024 22:36:31] "POST /dep_parse HTTP/1.1" 200 -
+172.17.0.1 - - [30/Apr/2024 22:36:32] "POST /entity_linking HTTP/1.1" 200 -
+172.17.0.1 - - [30/Apr/2024 22:36:33] "POST /lemmatize HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.17.0.2:5000
+[33mPress CTRL+C to quit[0m
+172.17.0.1 - - [30/Apr/2024 22:36:31] "POST /dep_parse HTTP/1.1" 200 -
+172.17.0.1 - - [30/Apr/2024 22:36:32] "POST /entity_linking HTTP/1.1" 200 -
+172.17.0.1 - - [30/Apr/2024 22:36:33] "POST /lemmatize HTTP/1.1" 200 -
+172.17.0.1 - - [30/Apr/2024 22:36:33] "POST /ner HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.17.0.2:5000
+[33mPress CTRL+C to quit[0m
+172.17.0.1 - - [30/Apr/2024 22:36:31] "POST /dep_parse HTTP/1.1" 200 -
+172.17.0.1 - - [30/Apr/2024 22:36:32] "POST /entity_linking HTTP/1.1" 200 -
+172.17.0.1 - - [30/Apr/2024 22:36:33] "POST /lemmatize HTTP/1.1" 200 -
+172.17.0.1 - - [30/Apr/2024 22:36:33] "POST /ner HTTP/1.1" 200 -
+172.17.0.1 - - [30/Apr/2024 22:36:34] "POST /pos_tag HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.17.0.2:5000
+[33mPress CTRL+C to quit[0m
+172.17.0.1 - - [30/Apr/2024 22:36:31] "POST /dep_parse HTTP/1.1" 200 -
+172.17.0.1 - - [30/Apr/2024 22:36:32] "POST /entity_linking HTTP/1.1" 200 -
+172.17.0.1 - - [30/Apr/2024 22:36:33] "POST /lemmatize HTTP/1.1" 200 -
+172.17.0.1 - - [30/Apr/2024 22:36:33] "POST /ner HTTP/1.1" 200 -
+172.17.0.1 - - [30/Apr/2024 22:36:34] "POST /pos_tag HTTP/1.1" 200 -
+172.17.0.1 - - [30/Apr/2024 22:36:34] "POST /sbd HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.17.0.2:5000
+[33mPress CTRL+C to quit[0m
+172.17.0.1 - - [30/Apr/2024 22:36:31] "POST /dep_parse HTTP/1.1" 200 -
+172.17.0.1 - - [30/Apr/2024 22:36:32] "POST /entity_linking HTTP/1.1" 200 -
+172.17.0.1 - - [30/Apr/2024 22:36:33] "POST /lemmatize HTTP/1.1" 200 -
+172.17.0.1 - - [30/Apr/2024 22:36:33] "POST /ner HTTP/1.1" 200 -
+172.17.0.1 - - [30/Apr/2024 22:36:34] "POST /pos_tag HTTP/1.1" 200 -
+172.17.0.1 - - [30/Apr/2024 22:36:34] "POST /sbd HTTP/1.1" 200 -
+172.17.0.1 - - [30/Apr/2024 22:36:35] "POST /tokenize HTTP/1.1" 200 -
+eff82e59a11bb28986c2cc8319c5cf28a038db99cb97e153c6a7994460c1e568
+eff82e59a11bb28986c2cc8319c5cf28a038db99cb97e153c6a7994460c1e568
+Untagged: spacy-demo:latest
+Deleted: sha256:edfb9661e9a3af715341ad10c28d6c6037f2e60b98198327cd7fc7f59777d7ad
