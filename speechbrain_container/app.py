@@ -7,6 +7,7 @@ from speechbrain.inference.interfaces import foreign_class
 from speechbrain.inference.speaker import SpeakerRecognition
 from speechbrain.inference.classifiers import EncoderClassifier
 from speechbrain.inference.VAD import VAD
+import librosa
 import nltk
 import io
 import zipfile
@@ -344,6 +345,17 @@ def detect_voice_activity():
         logging.info(f"Saved audio file to temporary location: {temp_audio_file.name}")
 
         try:
+            # Check the sample rate of the input audio file
+            sample_rate = librosa.get_samplerate(temp_audio_file.name)
+            target_sample_rate = 16000  # Replace with the expected sample rate of the VAD model
+
+            if sample_rate != target_sample_rate:
+                # Resample the audio file to match the expected sample rate
+                audio, _ = librosa.load(temp_audio_file.name, sr=target_sample_rate)
+                import soundfile as sf
+                sf.write(temp_audio_file.name, audio, target_sample_rate)
+                logging.info(f"Resampled audio file to {target_sample_rate} Hz")
+
             logging.info("Loading VAD model...")
             vad = VAD.from_hparams(
                 source="speechbrain/vad-crdnn-libriparty",
@@ -355,33 +367,20 @@ def detect_voice_activity():
             return jsonify({'error': 'An error occurred while loading the VAD model.'}), 500
 
         try:
-            logging.info("Loading and preprocessing audio file...")
-            audio, sample_rate = torchaudio.load(temp_audio_file.name)
-            resampled_audio = torchaudio.transforms.Resample(sample_rate, vad.hparams.sample_rate)(audio)
-            processed_audio = resampled_audio.squeeze(0).unsqueeze(1).to(vad.device)
-            temp_processed_audio_path = temp_audio_file.name.replace(".wav", "_processed.wav")
-            torchaudio.save(temp_processed_audio_path, processed_audio, vad.hparams.sample_rate)
-            logging.info("Audio file loaded, preprocessed, and saved successfully.")
-        except Exception as e:
-            logging.exception(f"Error loading, preprocessing, or saving audio file: {str(e)}")
-            return jsonify({'error': 'An error occurred while loading, preprocessing, or saving the audio file.'}), 500
-
-        try:
             logging.info("Starting voice activity detection...")
-            boundaries = vad.get_speech_segments(temp_processed_audio_path)
+            boundaries = vad.get_speech_segments(temp_audio_file.name)
             logging.info("Voice activity detection completed.")
         except Exception as e:
             logging.exception(f"Error during voice activity detection: {str(e)}")
             return jsonify({'error': 'An error occurred during voice activity detection.'}), 500
         finally:
             os.remove(temp_audio_file.name)
-            if os.path.exists(temp_processed_audio_path):
-                os.remove(temp_processed_audio_path)
 
     # Convert boundaries tensor to a list of dictionaries
     boundaries_list = [{'start': start.item(), 'end': end.item()} for start, end in boundaries]
 
     return jsonify({'boundaries': boundaries_list})
+
 
 if __name__ == '__main__':
     logging.info("Starting Flask application...")
