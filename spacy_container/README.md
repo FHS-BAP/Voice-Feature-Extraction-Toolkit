@@ -44,6 +44,20 @@
 - **Payload**: `{"text": "John Doe lives in New York."}`
 - **Response**: `{"entities": [["John Doe", "PERSON"], ["New York", "GPE"]]}`
 
-## Usage
+## How to use
 
-To run the application, execute: `./test.sh`
+cd into this directory and run the following command:
+
+```bash
+./test.sh
+```
+
+It will setup the docker container, and iterate through the subroutines to demonstrate the functionalities.
+
+## Updating subroutines
+
+For customizing the inputs, you would need to upload your files of interest, and updates the subroutines to target them.
+
+## Citation
+
+None found. MIT License included instead.
