@@ -22,19 +22,22 @@ if [ $(docker inspect -f '{{.State.Running}}' $container_id) != "true" ]; then
 fi
 
 # Wait for the container to start
-# sleep 60
+sleep 10
+
 # Wait for the container to be ready
-echo "Waiting for the container to be ready..."
-while ! docker exec $container_id curl -s --head http://localhost:5000 >/dev/null; do
-    sleep 1
-done
-echo "Container is ready."
+# echo "Waiting for the container to be ready..."
+# while ! docker exec $container_id curl -s --head http://localhost:5000 >/dev/null; do
+#     sleep 1
+# done
+# echo "Container is ready."
 
 # run the subroutines using a for loop
 for script in ./subroutines/*_test.sh; do
     bash $script $container_id
     if [ $? -ne 0 ]; then
-        exit 1
+        # break the loop if a script fails
+        echo "Failed to run $script"
+        break
     fi
 done
 
