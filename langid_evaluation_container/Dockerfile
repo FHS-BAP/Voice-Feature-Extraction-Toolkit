@@ -10,4 +10,4 @@ COPY src/ /app/
 
 RUN for script in mapping_scripts/{datasets,models}/*/*/make_id_mappings.py; do python3 $script; done
 
-ENTRYPOINT ["python3", "evaluate_using_mapping_scripts.py"]
+ENTRYPOINT ["/app/run.sh"]
