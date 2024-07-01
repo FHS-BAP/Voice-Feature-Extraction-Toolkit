@@ -5,7 +5,13 @@ if [ -z "$1" ]; then
   echo "Container ID not provided." | tee -a "$BASE_DIR/results/logs.txt"
   exit 1
 fi
+if [ -z "$2" ]; then
+  echo "Port not provided." | tee -a "$BASE_DIR/results/logs.txt"
+  exit 1
+fi
+
 container_id=$1
+port=$2
 
 # Set the base directory relative to the script's location
 BASE_DIR=$(dirname "$0")/..
@@ -17,7 +23,7 @@ if [ ! -f "$BASE_DIR/speech_separation_example.wav" ]; then
 fi
 
 # Send a test request to the speech separation endpoint with the audio file
-response=$(curl --fail -X POST -F "audio=@$BASE_DIR/speech_separation_example.wav" -o "$BASE_DIR/results/separated_sources.zip" http://localhost:5000/separate_speech)
+response=$(curl --fail -X POST -F "audio=@$BASE_DIR/speech_separation_example.wav" -o "$BASE_DIR/results/separated_sources.zip" http://localhost:$port/separate_speech)
 
 # Check the exit status of the curl command
 if [ $? -ne 0 ]; then

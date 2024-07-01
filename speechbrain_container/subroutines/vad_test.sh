@@ -5,7 +5,13 @@ if [ -z "$1" ]; then
   echo "Container ID not provided." | tee -a "$BASE_DIR/results/logs.txt"
   exit 1
 fi
+if [ -z "$2" ]; then
+  echo "Port not provided." | tee -a "$BASE_DIR/results/logs.txt"
+  exit 1
+fi
+
 container_id=$1
+port=$2
 
 # Set the base directory relative to the script's location
 BASE_DIR=$(dirname "$0")/..
@@ -17,7 +23,7 @@ if [ ! -f "$BASE_DIR/example.wav" ]; then
 fi
 
 # Send a test request to the voice activity detection endpoint with the audio file
-response=$(curl --fail -X POST -F "audio=@$BASE_DIR/example.wav" http://localhost:5000/detect_voice_activity)
+response=$(curl --fail -X POST -F "audio=@$BASE_DIR/example.wav" http://localhost:$port/detect_voice_activity)
 echo "Server response: $response" | tee -a "$BASE_DIR/results/logs.txt"
 
 # Check the exit status of the curl command
