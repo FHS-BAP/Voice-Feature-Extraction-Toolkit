@@ -1,5 +1,20 @@
 #!/bin/bash
 
+# Set default port value
+PORT=5000
+
+# read port flag
+# Parse command line options
+while [[ "$#" -gt 0 ]]; do
+    case $1 in
+        -p|--port) PORT="$2"; shift ;;
+        *) echo "Unknown parameter passed: $1"; exit 1 ;;
+    esac
+    shift
+done
+
+echo "Using port $PORT"
+
 # Create the results directory if it doesn't exist
 mkdir -p results
 
@@ -14,7 +29,7 @@ if [ $? -ne 0 ]; then
 fi
 
 # Run the Docker container in detached mode
-container_id=$(docker run -d -p 5000:5000 speechbrain-demo)
+container_id=$(docker run -d -p $PORT:5000 speechbrain-demo)
 if [ $(docker inspect -f '{{.State.Running}}' $container_id) != "true" ]; then
     echo "Failed to start container."
     docker logs $container_id
@@ -33,7 +48,7 @@ sleep 10
 
 # run the subroutines using a for loop
 for script in ./subroutines/*_test.sh; do
-    bash $script $container_id
+    bash $script $container_id $PORT
     if [ $? -ne 0 ]; then
         # break the loop if a script fails
         echo "Failed to run $script"

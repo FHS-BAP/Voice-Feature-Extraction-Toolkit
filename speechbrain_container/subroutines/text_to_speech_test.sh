@@ -5,7 +5,13 @@ if [ -z "$1" ]; then
   echo "Container ID not provided." | tee -a "$BASE_DIR/results/logs.txt"
   exit 1
 fi
+if [ -z "$2" ]; then
+  echo "Port not provided." | tee -a "$BASE_DIR/results/logs.txt"
+  exit 1
+fi
+
 container_id=$1
+port=$2
 
 # Set the base directory relative to the script's location
 BASE_DIR=$(dirname "$0")/..
@@ -17,7 +23,7 @@ if [ ! -f "$BASE_DIR/example_tts.txt" ]; then
 fi
 
 # Send a test request to the text-to-speech endpoint with the text file
-response=$(curl --fail -X POST -F "text=@$BASE_DIR/example_tts.txt" -o "$BASE_DIR/results/tts_result.wav" http://localhost:5000/text_to_speech)
+response=$(curl --fail -X POST -F "text=@$BASE_DIR/example_tts.txt" -o "$BASE_DIR/results/tts_result.wav" http://localhost:$port/text_to_speech)
 
 # Check the exit status of the curl command
 if [ $? -ne 0 ]; then
