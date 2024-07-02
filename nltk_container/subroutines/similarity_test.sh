@@ -5,8 +5,13 @@ if [ -z "$1" ]; then
     echo "Container ID not provided."
     exit 1
 fi
+if [ -z "$2" ]; then
+  echo "Port not provided." | tee -a "$BASE_DIR/results/logs.txt"
+  exit 1
+fi
 
 container_id=$1
+port=$2
 
 # Set the base directory relative to the script's location
 BASE_DIR=$(dirname "$0")/..
@@ -18,7 +23,7 @@ if [ ! -f "$BASE_DIR/example.txt" ] || [ ! -f "$BASE_DIR/example_2.txt" ]; then
 fi
 
 # Send a test request to the text similarity endpoint and save the response
-response=$(curl --fail -s -X POST http://localhost:5000/text_similarity)
+response=$(curl --fail -s -X POST http://localhost:$port/text_similarity)
 
 # Check the exit status of the curl command
 if [ $? -ne 0 ]; then
