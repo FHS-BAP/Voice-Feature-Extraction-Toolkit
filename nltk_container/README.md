@@ -32,6 +32,12 @@ It will setup the docker container, and iterate through the subroutines to demon
 
 For customizing the inputs, you would need to upload your files of interest, and updates the subroutines to target them.
 
+## Port Issues
+
+![Port Allocated](images/port_allocated.png)
+
+If you run into this issue it can be resolved by changing the port number in test.sh file.
+
 ## Citation
 
 ```bibtex

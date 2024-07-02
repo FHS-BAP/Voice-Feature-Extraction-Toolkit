@@ -5,8 +5,13 @@ if [ -z "$1" ]; then
     echo "Container ID not provided."
     exit 1
 fi
+if [ -z "$2" ]; then
+  echo "Port not provided." | tee -a "$BASE_DIR/results/logs.txt"
+  exit 1
+fi
 
 container_id=$1
+port=$2
 
 # Set the base directory relative to the script's location
 BASE_DIR=$(dirname "$0")/..
@@ -21,7 +26,7 @@ fi
 text=$(cat "$BASE_DIR/example.txt")
 
 # Send a test request to the lemmatization endpoint and save the response
-response=$(curl --fail -s -X POST -H "Content-Type: application/json" -d "{\"text\": \"$text\"}" http://localhost:5000/lemmatize)
+response=$(curl --fail -s -X POST -H "Content-Type: application/json" -d "{\"text\": \"$text\"}" http://localhost:$port/lemmatize)
 
 # Check the exit status of the curl command
 if [ $? -ne 0 ]; then

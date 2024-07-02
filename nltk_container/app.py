@@ -23,7 +23,7 @@ nltk.download('words')
 nltk.download('wordnet')
 nltk.download('vader_lexicon')
 nltk.download('stopwords')
-nltk.download('textcat')
+#nltk.download('textcat')
 nltk.download('crubadan')
 
 app = Flask(__name__)
