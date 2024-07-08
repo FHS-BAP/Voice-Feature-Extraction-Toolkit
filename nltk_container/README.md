@@ -38,9 +38,27 @@ For customizing the inputs, you would need to upload your files of interest, and
 
 If you run into this issue it can be resolved by changing the port number in test.sh file.
 
-## Citation
+## Acknowledgement
+- [nltk](https://github.com/nltk/nltk): (the Natural Language Toolkit) Open source Python modules, data sets, and tutorials supporting research and development in Natural Language Processing (License Apache)
 
+## Citations
+If you use this in your research, please cite this repo:
 ```bibtex
-Bird, Steven, Edward Loper and Ewan Klein (2009).
-Natural Language Processing with Python.  O'Reilly Media Inc.
+@misc{fhsbap2024vfetnltkcontainer,
+  title={Voice-Feature-Extraction-Toolkit/nltk_container},
+  author={Khemakhem, Mahdi},
+  journal={GitHub repository},
+  year={2024},
+  publisher={GitHub},
+  howpublished = {\url{https://github.com/FHS-BAP/Voice-Feature-Extraction-Toolkit/tree/main/nltk_container}}
+}
+```
+and this paper:
+```bibtex
+@book{bird2009natural,
+  title={Natural Language Processing with Python},
+  author={Bird, Steven and Loper, Edward and Klein, Ewan},
+  year={2009},
+  publisher={O'Reilly Media Inc.}
+}
 ```

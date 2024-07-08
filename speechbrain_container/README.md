@@ -39,8 +39,22 @@ It will setup the docker container, and iterate through the subroutines to demon
 
 For customizing the inputs, you would need to upload your files of interest, and updates the subroutines to target them.
 
-## Citation
+## Acknowledgement
+- [SpeechBrain](https://github.com/speechbrain/speechbrain): Open-source PyTorch toolkit that accelerates Conversational AI development (License Apache)
 
+## Citations
+If you use this in your research, please cite this repo:
+```bibtex
+@misc{fhsbap2024vfetspeechbraincontainer,
+  title={Voice-Feature-Extraction-Toolkit/speechbrain_container},
+  author={Khemakhem, Mahdi},
+  journal={GitHub repository},
+  year={2024},
+  publisher={GitHub},
+  howpublished = {\url{https://github.com/FHS-BAP/Voice-Feature-Extraction-Toolkit/tree/main/speechbrain_container}}
+}
+```
+and the SpeechBrain paper:
 ```bibtex
 @misc{speechbrain,
   title={{SpeechBrain}: A General-Purpose Speech Toolkit},
