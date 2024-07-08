@@ -1,6 +1,5 @@
 ## Voice-Feature-Extraction-Toolkit
 This repository contains examples of the usage of various voice feature extraction libraries and tools. Example files and docker containers are provided.
-## Folder Functionality
 ### opensmile
 - Docker container for running scripts that use the openSMILE Python library
 - Shows examples of how to use the openSMILE Python library to generate Low Level Descriptors (LLDs) and Functionals from the ComParE 2016 feature set
