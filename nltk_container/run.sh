@@ -70,10 +70,10 @@ if [ ! -d "$functions_folder" ]; then
 fi
 
 # Get the list of function files
-function_files=$(ls "$functions_folder"/*.sh 2>/dev/null)
+function_files=("$functions_folder"/*.sh)
 
 # Check if any function files were found
-if [ -z "$function_files" ]; then
+if [ ${#function_files[@]} -eq 0 ] || [ ! -e "${function_files[0]}" ]; then
     echo "No function files found in $functions_folder"
     exit 0
 fi
@@ -81,8 +81,10 @@ fi
 # Populate the functions array
 functions=()
 for file in "${function_files[@]}"; do
-    filename=$(basename "$file" .sh)
-    functions+=("$filename")
+    if [ -f "$file" ]; then
+        filename=$(basename "$file" .sh)
+        functions+=("$filename")
+    fi
 done
 
 # Enter a choice loop (functions + exit)

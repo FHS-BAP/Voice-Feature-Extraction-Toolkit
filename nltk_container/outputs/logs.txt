@@ -1,42 +1,30 @@
 Building container...
 Build successful.
 Please enter the port number you would like to assign to the Docker container: 
-Attempting to start container on port 8000...
-Container started successfully on port 8000.
+Attempting to start container on port 6000...
+Container started successfully on port 6000.
 Waiting for container to initialize...
 Container is ready.
 Available functions:
-1. Language Detection
-2. Exit
+1. Antonym
+2. Language Detection
+3. Exit
 Enter the number of the function you want to run:
 Running 'Language Detection' function...
 Please enter the relative path of the input file:
+Language detection completed successfully.
+Language detection results:
+{"language":"eng"}
 Available functions:
-1. Language Detection
-2. Exit
+1. Antonym
+2. Language Detection
+3. Exit
 Enter the number of the function you want to run:
 Exiting the program.
 Stopping and removing Docker container...
-e95308935e0e1148caf7e5d9c2a6116b319e34fb98b3d4c70e4c2dfebcd7e144
-e95308935e0e1148caf7e5d9c2a6116b319e34fb98b3d4c70e4c2dfebcd7e144
+8ed19fd739396d5fb3370342bbce5e6194df0173eeff2bac5f88e0ef8f4f07fb
+8ed19fd739396d5fb3370342bbce5e6194df0173eeff2bac5f88e0ef8f4f07fb
 Removing Docker image...
 Untagged: nltk-demo:latest
-Deleted: sha256:28280e20da2abc8e6263d89542988c3ae5a4bef67e027b771b94b5aaa5725a2d
+Deleted: sha256:77a18fb6b6c65e04c1a9591124a6edd65924577ab590e0774f1ecdc10f2fbb3f
 Script execution completed.
-ot/nltk_data...
-[nltk_data]   Unzipping corpora/words.zip.
-[nltk_data] Downloading package wordnet to /root/nltk_data...
-[nltk_data] Downloading package vader_lexicon to /root/nltk_data...
-[nltk_data] Downloading package stopwords to /root/nltk_data...
-[nltk_data]   Unzipping corpora/stopwords.zip.
-[nltk_data] Downloading package crubadan to /root/nltk_data...
-[nltk_data]   Unzipping corpora/crubadan.zip.
- * Serving Flask app 'app'
- * Debug mode: off
-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://172.17.0.2:5000
-[33mPress CTRL+C to quit[0m
-172.17.0.1 - - [11/Jul/2024 03:03:46] "[33mHEAD / HTTP/1.1[0m" 404 -
-172.17.0.1 - - [11/Jul/2024 03:04:05] "POST /detect_language HTTP/1.1" 200 -
