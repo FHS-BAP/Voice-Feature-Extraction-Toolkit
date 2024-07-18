@@ -58,6 +58,27 @@ It will setup the docker container, and iterate through the subroutines to demon
 
 For customizing the inputs, you would need to upload your files of interest, and updates the subroutines to target them.
 
-## Citation
+## Acknowledgement
+- [spaCy](https://github.com/explosion/spaCy): Library for advanced Natural Language Processing in Python (License MIT)
 
-None found. MIT License included instead.
+## Citations
+If you use this in your research, please cite this repo:
+```bibtex
+@misc{fhsbap2024vfetspacycontainer,
+  title={Voice-Feature-Extraction-Toolkit/spacy_container},
+  author={Khemakhem, Mahdi},
+  journal={GitHub repository},
+  year={2024},
+  publisher={GitHub},
+  howpublished = {\url{https://github.com/FHS-BAP/Voice-Feature-Extraction-Toolkit/tree/main/spacy_container}}
+}
+```
+and the spaCy paper:
+```bibtex
+@article{honnibal2020spacy,
+  title={spaCy: Industrial-strength Natural Language Processing in Python},
+  author={Honnibal, Matthew and Montani, Ines and Van Landeghem, Sofie and Boyd, Adriane},
+  year={2020},
+  doi={10.5281/zenodo.1212303}
+}
+```
