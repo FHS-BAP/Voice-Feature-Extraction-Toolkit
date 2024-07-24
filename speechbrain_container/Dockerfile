@@ -1,12 +1,11 @@
 FROM ubuntu:24.04
 
-# Install Python 3.11 and pip
+# Install Python 3.11, pip, ffmpeg, and jq
 RUN apt-get update && \
     apt-get install -y software-properties-common && \
     add-apt-repository ppa:deadsnakes/ppa && \
     apt-get update && \
-    apt-get install -y python3.11 python3.11-distutils python3.11-dev python3.11-venv && \
-    apt-get install -y ffmpeg && \
+    apt-get install -y python3.11 python3.11-distutils python3.11-dev python3.11-venv ffmpeg jq && \
     python3.11 -m ensurepip && \
     python3.11 -m pip install --upgrade pip
 

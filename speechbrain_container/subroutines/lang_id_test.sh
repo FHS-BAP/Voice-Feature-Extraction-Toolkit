@@ -49,8 +49,8 @@ fi
 echo "$response" > "$BASE_DIR/results/language_identification_results.txt"
 
 # Extract the predicted language and likelihood from the response
-predicted_language=$(echo "$response" | jq -r '.language')
-likelihood=$(echo "$response" | jq -r '.likelihood')
+predicted_language=$(echo "$response" | grep -o '"language":"[^"]*"' | sed 's/"language":"//;s/"//')
+likelihood=$(echo "$response" | grep -o '"likelihood":[0-9.]*' | sed 's/"likelihood"://')
 
 # Check if the predicted language and likelihood are valid
 if [ -z "$predicted_language" ] || [ -z "$likelihood" ]; then
