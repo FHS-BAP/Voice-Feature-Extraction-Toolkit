@@ -25,7 +25,7 @@ If you use this in your research, please cite this repo:
 ```bibtex
 @misc{fhsbap2024vfetespnetcontainer,
   title={Voice-Feature-Extraction-Toolkit/espnet_container},
-  author={Khemakhem, Mahdi},
+  author={Serrano, Xavier},
   journal={GitHub repository},
   year={2024},
   publisher={GitHub},
