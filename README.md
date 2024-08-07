@@ -11,6 +11,6 @@ For usage of spaCy (a Python library for advanced natural language processing). 
 ### speechbrain_container
 For usage of SpeechBrain (open-source PyTorch toolkit for speech and text procesing). See container's supported functionality [here](https://github.com/FHS-BAP/Voice-Feature-Extraction-Toolkit/blob/main/speechbrain_container/README.md#supported-tasks).
 ### 2vec
-For processing files using models of the transformers Python library, specifically [Data2Vec](https://huggingface.co/docs/transformers/en/model_doc/data2vec#resources) and [Wav2Vec](https://huggingface.co/docs/transformers/en/model_doc/wav2vec2) (models developed by Meta AI).
+For processing files using models of the transformers Python library, specifically [Data2Vec](https://huggingface.co/docs/transformers/en/model_doc/data2vec) and [Wav2Vec](https://huggingface.co/docs/transformers/en/model_doc/wav2vec2) (models developed by Meta AI).
 ### espnet_example
 For usage of the ESPnet Python library. ESPnet is an end-to-end speech processing toolkit. Container functionality includes transcription and diarization.
