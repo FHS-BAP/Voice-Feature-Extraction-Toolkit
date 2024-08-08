@@ -1,5 +1,5 @@
 # Voice-Feature-Extraction-Toolkit
-This repository contains READMEs, sample data, and docker containers for the usage of various voice feature extraction libraries and tools.
+This repository contains READMEs, sample data, and Docker containers to facilitate the usage of various voice feature extraction libraries and tools.
 ## 2vec
 For processing data via the following models: [Data2Vec](https://huggingface.co/docs/transformers/en/model_doc/data2vec) and [Wav2Vec](https://huggingface.co/docs/transformers/en/model_doc/wav2vec2).
 ## espnet
