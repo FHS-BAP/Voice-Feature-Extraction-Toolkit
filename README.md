@@ -15,4 +15,4 @@ spaCy is a Python library for industrial-strength natural language processing, i
 ## speechbrain
 SpeechBrain is an open-source PyTorch toolkit for speech and text processing.
 ### langid
-- Docker container for evaluating language identification models on datasets
+Evaluate language identification models on datasets
