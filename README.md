@@ -6,6 +6,8 @@ For processing data via the following models: [Data2Vec](https://huggingface.co/
 ESPnet is an end-to-end Python speech processing toolkit, including functionality such as transcription and diarization.
 ## jiwer
 JiWER is a python package to evaluate an automatic speech recognition system. JiWER supports the following measures: word error rate (WER), match error rate (MER), word information lost (WIL), word information preserved (WIP), and character error rate (CER).
+## langid
+Evaluate language identification models on datasets
 ## nltk
 NLTK is a suite of open source Python modules, data sets, and tutorials supporting research and development in natural language processing.
 ## opensmile
@@ -14,5 +16,3 @@ openSMILE (open-source Speech and Music Interpretation by Large-space Extraction
 spaCy is a Python library for industrial-strength natural language processing, including functionality such as: tokenization, part-of-speech tagging, dependency parsing, lemmatization, sentence boundary location, and named entity recognition.
 ## speechbrain
 SpeechBrain is an open-source PyTorch toolkit for speech and text processing.
-### langid
-Evaluate language identification models on datasets

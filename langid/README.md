@@ -17,7 +17,13 @@ See [below](#supported-models-and-datasets) for supported values for `model_id` 
 `dataset_config_name` and `dataset_split` are specific to each dataset.
 Look at a dataset's card on HuggingFace for supported values.
 
-A quick example:
+Output includes
+- JSON of the predictions and labels
+- graphs of model performance
+- confusion matrix
+The Excel report contains similar information but in human-readable form.
+
+## Example
 ```bash
 docker run -it -v output:/output <this container's image> both sanchit-gandhi/whisper-medium-fleurs-lang-id PolyAI/minds14 all 'train[:5]'
 ```
@@ -25,12 +31,6 @@ docker run -it -v output:/output <this container's image> both sanchit-gandhi/wh
 This evaluates the model `sanchit-gandhi/whisper-medium-fleurs-lang-id` on the dataset `PolyAI/minds14` on first five samples of the `train` split of the `all` config of the dataset (which, for this dataset, includes all languages).
 
 View prediction output and/or generated report will be in the volume mounted to `/output`.
-Output includes
-- JSON of the predictions and labels
-- graphs of model performance
-- confusion matrix
-
-The Excel report contains similar information but in human-readable form.
 
 # Supported models and datasets
 ## Models
