@@ -19,3 +19,10 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8002:5000"
+
+  spacy:
+    build:
+      context: ../../spacy
+      dockerfile: Dockerfile
+    ports:
+      - "8003:5000"
