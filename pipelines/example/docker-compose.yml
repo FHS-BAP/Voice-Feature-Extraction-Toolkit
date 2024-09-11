@@ -1,0 +1,21 @@
+version: '3'
+services:  
+  nltk:    
+    build:      
+      context: ../../nltk      
+      dockerfile: Dockerfile
+    ports:
+      - "8000:5000"
+  speechbrain:
+    build:
+      context: ../../speechbrain
+      dockerfile: Dockerfile
+    ports:
+      - "8001:5000"
+
+  nlp_features:
+    build:
+      context: ../../nlp_features
+      dockerfile: Dockerfile
+    ports:
+      - "8002:5000"

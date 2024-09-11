@@ -1,0 +1,99 @@
+Building container...
+#1 [internal] load build definition from Dockerfile
+#1 sha256:8a5fe080d3668f1f25009cbad2d58a240893888df9dd95c8e497147c45de5dfc
+#1 transferring dockerfile: 129B done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:0f7fde7b20cc3bb705312c6e2a12cd0513982f2f7c55e567264d70b8f187d596
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:24.04
+#3 sha256:c67b68fe12f690b152b49cfd4c7232ec0c91a65bdc30d97897daf428361b8eb6
+#3 DONE 0.5s
+
+#4 [1/7] FROM docker.io/library/ubuntu:24.04@sha256:8a37d68f4f73ebf3d4efafbcf66379bf3728902a8038616808f04e34a9ab63ee
+#4 sha256:7314cada5c21408914367e635e20f274b6237bae25694ccf6449252937432c07
+#4 DONE 0.0s
+
+#7 [internal] load build context
+#7 sha256:f9d1b6bb7a127acfd38ca361ff5091e459f0148c44af8da67c0f83749db84319
+#7 transferring context: 20.31kB 0.0s done
+#7 DONE 0.0s
+
+#8 [4/7] COPY requirements.txt .
+#8 sha256:8c3d07f58f17aa7a6d428eb71b8c4ad104730ae535d8b6aa8264158d9118272c
+#8 CACHED
+
+#9 [5/7] RUN python3.11 -m pip install --no-cache-dir -r requirements.txt
+#9 sha256:aa55bff68fc656b77f97e184714ed0e542395b65ca052449a30873869deecfc0
+#9 CACHED
+
+#6 [3/7] WORKDIR /app
+#6 sha256:a64a5defa856dba61ce23ef7cd1a38a25753ef8c1d6f90d06a617fee8af3bc9a
+#6 CACHED
+
+#5 [2/7] RUN apt-get update &&     apt-get install -y software-properties-common &&     add-apt-repository ppa:deadsnakes/ppa &&     apt-get update &&     apt-get install -y python3.11 python3.11-distutils python3.11-dev python3.11-venv &&     apt-get install -y ffmpeg &&     python3.11 -m ensurepip &&     python3.11 -m pip install --upgrade pip
+#5 sha256:8d76c101b135bc7501d9a184eefd48adebc2879e8cc19482858f9962a5097526
+#5 CACHED
+
+#10 [6/7] RUN python3.11 -m spacy download en_core_web_sm
+#10 sha256:5183cc47abcec2d31bf6fae69f9a646bede933a715342a2703408cadc369969a
+#10 CACHED
+
+#11 [7/7] COPY . .
+#11 sha256:fbf0a40ae30b2a7d2904c5e24c895ea4002a88e3c61c0f49f95832f583b12c45
+#11 DONE 0.0s
+
+#12 exporting to image
+#12 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#12 exporting layers 0.0s done
+#12 writing image sha256:b89de768af032f6e17aad4868993043148429cc31d8b16d54595ca7b80084c76 done
+#12 naming to docker.io/library/nlp-app done
+#12 DONE 0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+Build successful.
+Please enter the port number you would like to assign to the Docker container: 
+Attempting to start container on port 6767...
+Container started successfully on port 6767.
+Waiting for container to initialize...
+Container is ready.
+
+Available functions:
+1. Action Verb Rate
+2. Brunet's Index
+3. Cosine Repetition
+4. Honore Index
+5. Lexical Diversity
+6. Negative Adverb Rate
+7. Ngram Repetition
+8. Part of Speech Rate
+9. Exit
+Enter the number of the function you want to run:
+Running 'Part of Speech Rate' function...
+Please enter the relative path of the input file:
+Part of speech rate analysis completed successfully.
+Part of speech rate results:
+{"part_of_speech_counts":{"ADJ":8,"ADV":1,"NOUN":27,"PROPN":1,"PUNCT":18,"VERB":17},"part_of_speech_rates":{"ADJ":0.1111111111111111,"ADV":0.013888888888888888,"NOUN":0.375,"PROPN":0.013888888888888888,"PUNCT":0.25,"VERB":0.2361111111111111},"total_tokens":72}
+
+Available functions:
+1. Action Verb Rate
+2. Brunet's Index
+3. Cosine Repetition
+4. Honore Index
+5. Lexical Diversity
+6. Negative Adverb Rate
+7. Ngram Repetition
+8. Part of Speech Rate
+9. Exit
+Enter the number of the function you want to run:
+Exiting the program.
+Stopping and removing Docker container...
+df09f8c7f7c9e4cba122a879e28a309773251df29ae39fab10c440e7b80cc8de
+df09f8c7f7c9e4cba122a879e28a309773251df29ae39fab10c440e7b80cc8de
+Removing Docker image...
+Untagged: nlp-app:latest
+Deleted: sha256:b89de768af032f6e17aad4868993043148429cc31d8b16d54595ca7b80084c76
+Script execution completed.
