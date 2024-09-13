@@ -5,7 +5,7 @@ Includes models and datasets for verbatim transcription, which include disfluenc
 
 # Usage
 ```bash
-docker run -it <image_id> -v <container-output>:/output <model_id> <dataset_id> <dataset_config_name> <dataset_split>
+docker run -it <image_id> -v <container-output>:/output (predict|evaluate) <model_id> <dataset_id> <dataset_config_name> <dataset_split>
 ```
 
 The container writes output to the `/output` folder. Mount a folder on the host to save and view the output with the `-v` or `--mount` flags.
@@ -23,7 +23,7 @@ and the split is one of train, dev, test, and val.
 docker run -it <image_id> -v container-output:/output NbAiLabBeta/nb-whisper-medium-verbatim amaai-lab/DisfluencySpeech default train[:5]
 ```
 
-This evaluates the model `NbAiLabBeta/nb-whisper-medium-verbatim` on the first five samples in the `train` split of the `default` subset of the dataset `amaai-lab/DisfluencySpeech`.
+This evaluates the model `NbAiLabBeta/nb-whisper-medium-verbatim` on the first five samples in the train split of the default subset  of the dataset `amaai-lab/DisfluencySpeech`.
 
 ## Output
 The container's output will be JSON files in the output volume.
@@ -32,14 +32,14 @@ JSON files include:
 
 # Available Models
 ## General ASR
-- openai/whisper-base
+- [openai/whisper-base](https://huggingface.co/openai/whisper-base)
 ## Verbatim
-- openai/whisper-base/prompting (openai/whisper-base with prompting)
-- NbAiLabBeta/nb-whisper-medium-verbatim
+- [openai/whisper-base/prompting](https://huggingface.co/openai/whisper-base) (openai/whisper-base with prompting)
+- [NbAiLabBeta/nb-whisper-medium-verbatim](https://huggingface.co/NbAiLabBeta/nb-whisper-medium-verbatim)
 
 # Available Datasets
 ## General ASR
-- hf-internal-testing/librispeech_asr_dummy
-- PolyAI/minds14
+- [hf-internal-testing/librispeech_asr_dummy](hf-internal-testing/librispeech_asr_dummy) (purely for debugging)
+- [PolyAI/minds14](https://huggingface.co/datasets/PolyAI/minds14)
 ## Verbatim
-- amaai-lab/DisfluencySpeech
+- [amaai-lab/DisfluencySpeech](https://huggingface.co/datasets/amaai-lab/DisfluencySpeech)

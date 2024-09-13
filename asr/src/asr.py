@@ -7,23 +7,37 @@ Original file is located at
     https://colab.research.google.com/drive/1Tbdwxr_dQO-JdVhnLKACq1URBwDlGXMe
 """
 
+from collections.abc import Iterable
 from pathlib import Path
 import json
 import sys
-import importlib.util
+import argparse
 
 import datasets
+from langid.src.evaluate_using_mapping_scripts import compute_metrics
 import transformers
 import evaluate
+
+ACTIONS = ["predict", "evaluate"]
 
 output_base_dir = Path("/output")
 load_scripts_base_dir = Path("/app/load_scripts")
 
-def main(model_id: str, dataset_id: str, dataset_config_name: str, dataset_split: str):
-    
+def make_metrics(predictions: Iterable[str], references: Iterable[str]):
+    wer_evaluator = make_metrics.load("wer")
+
+    wer = wer_evaluator.compute(predictions=predictions,  references=references)
+
+    return wer
+
+def main(action: str, model_id: str, dataset_id: str, dataset_config_name: str, dataset_split: str):
+    if action not in ACTIONS:
+        raise ValueError(f"Invalid action: {action}. Supported actions are {ACTIONS}")
+
     output_dir = output_base_dir / (model_id.replace("/", "_") + " on " + dataset_id.replace("/", "_"))
     output_dir.mkdir(parents=True, exist_ok=True)
 
+    # Load dataset and model
     sys.path.append(str(load_scripts_base_dir / "datasets" / dataset_id))
     import dataset_loader
     dataset = dataset_loader.load(dataset_config_name, dataset_split)
@@ -32,14 +46,10 @@ def main(model_id: str, dataset_id: str, dataset_config_name: str, dataset_split
     import model_loader
     model = model_loader.load()
 
+    # Make predictions
     predictions = model(dataset.select_columns("audio"))
 
     predictions = [pred["text"] for pred in predictions]
-
-    wer_evaluator = evaluate.load("wer")
-
-    wer = wer_evaluator.compute(predictions=predictions,  references=dataset["transcription"])
-    wer
 
     output_dir.mkdir(exist_ok=True)
     with open(output_dir / "metadata.json", "w") as out_file:
@@ -49,21 +59,34 @@ def main(model_id: str, dataset_id: str, dataset_config_name: str, dataset_split
             "dataset_config_name": dataset_config_name,
             "dataset_split": dataset_split,
         }, out_file)
-    with open(output_dir / "predictions.json", "w") as out_file:
-        json.dump({
-            "predictions": predictions,
-            "reference": dataset["transcription"]
-        }, out_file)
 
-    with open(output_dir  / "metrics.json", "w") as out_file:
-        json.dump({
-            "wer": wer,
-        }, out_file)
+    prediction_output = {
+        "predictions": predictions,
+    }
+    if action == "evaluate":
+        prediction_output["reference"] = dataset["transcription"]
+
+    with open(output_dir / "predictions.json", "w") as out_file:
+        json.dump(prediction_output, out_file)
+
+    if action == "evaluate":
+        wer = make_metrics(predictions, references=dataset["transcription"])
+
+        with open(output_dir  / "metrics.json", "w") as out_file:
+            json.dump({
+                "wer": wer,
+            }, out_file)
 
 if __name__ == "__main__":
-    model_id = sys.argv[1]
-    dataset_id = sys.argv[2]
-    dataset_config_name = sys.argv[3]
-    dataset_split = sys.argv[4]
+    parser = argparse.ArgumentParser(
+        prog="asr",
+    )
+    parser.add_argument("action", choices=["predict", "evaluate"], help="action to run. predict only creates predictions. evaluate also computes metrics and requires a dataset with transcriptions (as labels)")
+    parser.add_argument("model_id")
+    parser.add_argument("dataset_id")
+    parser.add_argument("dataset_config_name")
+    parser.add_argument("dataset_split")
 
-    main(model_id, dataset_id, dataset_config_name, dataset_split)
+    args = parser.parse_args()
+
+    main(args.action, args.model_id, args.dataset_id, args.dataset_config_name, args.dataset_split)
