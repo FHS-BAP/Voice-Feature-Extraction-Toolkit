@@ -34,3 +34,7 @@ python3 benchmark.py \
 --engine PYANNOTE \
 --pyannote-auth-token <HUGGINGFACE_TOKEN>
 ```
+
+## Further help
+See the [upstream repo](https://github.com/pyannote/pyannote-audio) for more details 
+including other supported engines and arguments.

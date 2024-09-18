@@ -6,7 +6,7 @@ The basic usage is
 docker run -it -b <audio volume or path>:/data <image id> [--diarize] [--compute_type (float16 | float32 |int8)] [--hf_token <huggingface token>] <audio path inside container> [<audio path inside container>...]
 ```
 
-The container runs WhisperX in `/data`, so paths should be relative to `/data`.
+WhisperX runs in `/data`, so paths should be relative to `/data`.
 
 This command will transcribe and align the given audio file, writing output to in several formats including
 - json
@@ -15,9 +15,9 @@ This command will transcribe and align the given audio file, writing output to i
 - tsv
 - vtt
 
-The files are named after the original audio file.
+Output will be created in the working directory (`/data` by default).
 
-The output will be created in `/data`.
+Output files are named after the original audio file.
 
 By default, WhisperX will run only transcription with word timings. To also enable diarization, add the `--diarize` flag.
 Diarization uses Pyannote/speaker-diarization-3.1, so you must accept Pyannote's conditions first.
@@ -25,6 +25,8 @@ Diarization uses Pyannote/speaker-diarization-3.1, so you must accept Pyannote's
 2. Accept their terms and conditions
 3. Create a Huggingface access token
 4. Pass the access token with the `--hf_token` flag
+
+When running with CPU, `--compute_type float32` may be required.
 
 ## Example
 ```bash

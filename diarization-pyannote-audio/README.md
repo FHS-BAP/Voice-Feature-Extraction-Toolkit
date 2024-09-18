@@ -20,5 +20,8 @@ To run diarization on the file `./data/audio.wav` writing output to `./output/di
 docker run -it -v ./output:/output ./data:/data <image_name> -t <huggingface_token> /data/audio.wav
 ```
 
+## Further help
+See the [upstream repo](https://github.com/pyannote/pyannote-audio) for more details
 # Credits
 Diarization script based off example in Pyannote-audio's README
+
