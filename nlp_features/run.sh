@@ -24,7 +24,7 @@ while true; do
 
     if [[ "$port" =~ ^[0-9]+$ ]] && [ "$port" -ge 1 ] && [ "$port" -le 65535 ]; then
         echo "Attempting to start container on port $port..."
-        container_id=$(docker run -d -p $port:5000 -v $(pwd)/output:/output nlp-app 2>/dev/null)
+        container_id=$(docker run -d -p $port:5000 -v "$(pwd)/output:/output" nlp-app)
         if [ $? -eq 0 ]; then
             echo "Container started successfully on port $port."
             break
