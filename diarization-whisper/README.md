@@ -1,1 +1,0 @@
-Docker container for https://github.com/MahmoudAshraf97/whisper-diarization.git
