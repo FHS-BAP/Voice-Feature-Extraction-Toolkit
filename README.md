@@ -4,6 +4,12 @@ This repository contains READMEs, sample data, and Docker containers to facilita
 For processing data via the following models: [Data2Vec](https://huggingface.co/docs/transformers/en/model_doc/data2vec) and [Wav2Vec](https://huggingface.co/docs/transformers/en/model_doc/wav2vec2).
 ## asr
 Evaluate automatic speech recognition (ASR) models on datasets.
+## diarization-benchmark
+Benchmark diarization engines
+## diarization-pyannote-audio
+Transcription and diarization using [pyannote-audio](https://github.com/pyannote/pyannote-audio)
+## diarization-whisperx
+Transcription using [Whisperx](https://github.com/m-bain/whisperX) and optional diarization using [pyannote-audio](https://github.com/pyannote/pyannote-audio)
 ## espnet
 ESPnet is an end-to-end Python speech processing toolkit, including functionality such as transcription and diarization.
 ## jiwer
