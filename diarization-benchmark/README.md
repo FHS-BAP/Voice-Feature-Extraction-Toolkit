@@ -1,5 +1,8 @@
 Docker container for https://github.com/Picovoice/speaker-diarization-benchmark
 
+Benchmarks several diarization engines/models, reporting several metrics including
+Diarization Error Rate, Jaccard Error Rate, and CPU and memory usage.
+
 Currently, no new models or datasets have been added. All benchmarks are from upstream.
 
 Uses the [Voxconverse](https://github.com/joonson/voxconverse) dataset
