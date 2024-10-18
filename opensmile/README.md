@@ -1,6 +1,6 @@
 # openSMILE Docker Examples
 
-> Examples of using the openSMILE Python library without and with [Docker.](https://docs.docker.com/engine/install/)
+> Examples of using the openSMILE Python library with and without [Docker.](https://docs.docker.com/engine/install/)
 
 This repository contains scripts that show examples of how to use the [openSMILE Python library](https://audeering.github.io/opensmile-python/) to generate Low Level Descriptors (LLDs) and Functionals from the ComParE 2016 feature set. The scripts can be run without and with Docker.
 
