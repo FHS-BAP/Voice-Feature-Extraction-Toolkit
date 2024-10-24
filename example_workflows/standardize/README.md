@@ -15,7 +15,7 @@ The scripts can be run with Docker (https://docs.docker.com/engine/install/) or 
 
 ### Install and Run Without Docker
 
-The requirements.txt file can be used to install the necessary libraries without utilizing a Docker environment. Python 3.6.8 was used to develop and test these scripts.
+The requirements.txt file can be used to install the necessary libraries without utilizing a Docker environment. Python 3.6.8 was used to develop and test these scripts.\
 After installing the necessary libraries via requirements.txt:
 
 ```sh
@@ -27,7 +27,7 @@ python standardize_audio.py
 
 [Docker](https://docs.docker.com/engine/install/) is required for building and running the docker container. Docker version 24.0.6, build ed223bc was used to develop and test these scripts.
 
-Run the necessary docker build and run commands provided in the build_docker.sh and run_docker.sh scripts and then run extract_features.py within the docker environment.
+Run the necessary docker build and run commands provided in the build_docker.sh and run_docker.sh scripts and then run the script within the docker environment.
 
 ```sh
 ./build_docker.sh
