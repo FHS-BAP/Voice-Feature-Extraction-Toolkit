@@ -4,7 +4,6 @@ miscellaneous functions for reading/writing files and iterating input files
 """
 import os
 import json
-from datetime import datetime
 
 def read_json(json_in):
     """
@@ -13,24 +12,6 @@ def read_json(json_in):
     with open(json_in, 'r') as infile:
         final = json.load(infile)
     return final
-
-def write_json(final, json_out):
-    """
-    write JSON file
-    make necessary subdirs
-    """
-    parent = os.path.dirname(json_out)
-    if not os.path.isdir(parent):
-        os.makedirs(parent)
-    with open(json_out, 'w') as outfile:
-        json.dump(final, outfile, sort_keys=True, indent=4)
-    print(f'wrote {json_out}')
-
-def get_dt_now():
-    """
-    convert datetime.now() output to a str that can be used for naming directories
-    """
-    return str(datetime.now()).replace(" ", "_").replace(":", "_").split(".")[0]
 
 def get_audio_files(root, audio_exts):
     """

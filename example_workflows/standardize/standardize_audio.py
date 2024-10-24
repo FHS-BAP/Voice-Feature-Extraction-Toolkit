@@ -48,13 +48,7 @@ def downsample_audio_files(json_in, audio_in_root, std_audio_ext, **kwargs):
 
 def main():
     """
-    audio_in_root: Root folder containing audio input files.
-    audio_in_exts: Accepted audio extensions.
-        Set to None if accepting all files in the audio_in_root.
-    do_write_metadata: If True, write audio metadata from the audio_in_root to a JSON file.
-        Else, skip the reading and writing of the audio metadata.
-
-    Standardize audio:
+    main entrypoint, see README.md for further documentation
     """
     config_list = [read_json('config/config.json'),
         read_json('config/check_downsample_config.json')]
