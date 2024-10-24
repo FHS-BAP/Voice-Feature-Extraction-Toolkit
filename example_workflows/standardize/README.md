@@ -19,7 +19,10 @@ The scripts can be run with Docker (https://docs.docker.com/engine/install/) or 
     * **do_write_metadata**:
         * if true, read and write audio metadata from files in **audio_in_root** with extensions included in **audio_in_exts**.
     * **do_downsample**:
-        * if true, downsample files in **audio_in_root** to the defined extension (**std_audio_ext**), audio encoding (**std_audio_encoding**), and sampling rate (**std_sampling_rate**).
+        * if true, downsample files to the defined extension (**std_audio_ext**), audio encoding (**std_audio_encoding**), and sampling rate (**std_sampling_rate**).
+    * **std_json_in**:
+        * if null, search for files to downsample in **audio_in_root**.
+        * if set, read this filepath as a JSON to define the audio files to downsample.
     * **std_log_level**:
         * if quiet, then suppress the terminal output from ffmpeg commands.
 
