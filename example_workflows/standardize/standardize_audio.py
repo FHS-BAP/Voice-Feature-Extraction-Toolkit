@@ -28,7 +28,7 @@ def downsample(wav_fp, out_fp, **kwargs):
         os.makedirs(os.path.dirname(out_fp))
     stream = ffmpeg.input(wav_fp)
     stream = ffmpeg.output(stream, out_fp, **kwargs)
-    stream.run()
+    stream.run(overwrite_output=True)
 
 def downsample_audio_files(json_in, audio_in_root, std_audio_ext, **kwargs):
     """
@@ -56,7 +56,8 @@ def main():
 
     Standardize audio:
     """
-    config_list = [read_json('config.json'), read_json('check_downsample_config.json')]
+    config_list = [read_json('config/config.json'),
+        read_json('config/check_downsample_config.json')]
     for config in config_list:
         audio_in_root = config['audio_in_root']
         audio_in_exts = config['audio_in_exts']
