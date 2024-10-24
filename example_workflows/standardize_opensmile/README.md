@@ -49,3 +49,19 @@ Run the necessary docker build and run commands provided in the build_docker.sh 
 ./run_docker.sh
 python standardize_opensmile.py
 ```
+## Acknowledgement
+- [openSMILE](https://github.com/audeering/opensmile): Open-source Speech and Music Interpretation by Large-space Extraction (License audEERING GmbH)
+
+## Citations
+```bibtex
+@article{eyben2010opensmile,
+  title={openSMILE - The Munich Versatile and Fast Open-Source Audio Feature Extractor},
+  author={Eyben, Florian and Wöllmer, Martin and Schuller, Björn},
+  booktitle={Proc. ACM Multimedia (MM)},
+  organization={ACM},
+  address={Florence, Italy},
+  isbn={978-1-60558-933-6},
+  pages={1459-1462},
+  year={2010}
+}
+```
