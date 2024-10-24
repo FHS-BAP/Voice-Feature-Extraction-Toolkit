@@ -31,7 +31,7 @@
 
 ### Install and Run Without Docker
 
-The requirements.txt file can be used to install the necessary libraries without utilizing a Docker environment. Python 3.6.8 was used to develop and test these scripts.
+The requirements.txt file can be used to install the necessary libraries without utilizing a Docker environment. Python 3.12.3 was used to develop and test these scripts.
 
 ```sh
 pip install -r requirements.txt
