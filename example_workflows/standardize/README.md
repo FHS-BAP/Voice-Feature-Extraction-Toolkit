@@ -13,6 +13,22 @@ The scripts can be run with Docker (https://docs.docker.com/engine/install/) or 
     * downsampled_wav/downsampled_first_ten_Sample_HV_Clip.wav
         * downsampled version of the WAV clip.
 
+### Configuration JSON Files
+
+* config parameters can be changed in the configuration JSON files.
+    * **do_write_metadata**:
+        * if true, read and write audio metadata from files in **audio_in_root** with extensions included in **audio_in_exts**.
+    * **do_downsample**:
+        * if true, downsample files in **audio_in_root** to the defined extension (**std_audio_ext**), audio encoding (**std_audio_encoding**), and sampling rate (**std_sampling_rate**).
+    * **std_log_level**:
+        * if quiet, then suppress the terminal output from ffmpeg commands.
+
+* config/
+    * config.json
+        * contains config parameters for reading, writing, and then downsampling of input_audio/ wav files.
+    * check_downsample_config.json
+        * contains config parameters for reading and writing output/downsampled_wav/ wav files.
+
 ### Install and Run Without Docker
 
 The requirements.txt file can be used to install the necessary libraries without utilizing a Docker environment. Python 3.6.8 was used to develop and test these scripts.\
