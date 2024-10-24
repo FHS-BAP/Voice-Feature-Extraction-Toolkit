@@ -1,7 +1,7 @@
 # standardize_audio.py
 
 > The standardize_audio.py script reads, writes, and standardizes the sample WAV clip.
-The scripts can be run with Docker (https://docs.docker.com/engine/install/) or without.
+The script can be run with Docker (https://docs.docker.com/engine/install/) or without.
 
 ### Sample Input and Output Files
 
@@ -34,8 +34,7 @@ The scripts can be run with Docker (https://docs.docker.com/engine/install/) or 
 
 ### Install and Run Without Docker
 
-The requirements.txt file can be used to install the necessary libraries without utilizing a Docker environment. Python 3.6.8 was used to develop and test these scripts.\
-After installing the necessary libraries via requirements.txt:
+The requirements.txt file can be used to install the necessary libraries without utilizing a Docker environment. Python 3.6.8 was used to develop and test these scripts.
 
 ```sh
 pip install -r requirements.txt

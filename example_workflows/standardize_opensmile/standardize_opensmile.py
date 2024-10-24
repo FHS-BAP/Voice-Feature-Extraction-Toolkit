@@ -48,12 +48,13 @@ def main():
             'loglevel': config['std_log_level']}
         downsample_audio_files(audio_in_root, std_audio_ext,
             **std_kw)
+        osm_input_root = f'output/downsampled_{std_audio_ext}/'
     else:
         print('skipping downsampling')
+        osm_input_root = audio_in_root
     osm_feat_list = config['osm_feat_list']
-    downsampled_root = f'output/downsampled_{std_audio_ext}/'
     for feat in osm_feat_list:
-        for audio_fp in get_audio_files(downsampled_root, std_audio_ext):
+        for audio_fp in get_audio_files(osm_input_root, std_audio_ext):
             audio_fn = os.path.splitext(os.path.basename(audio_fp))[0]
             csv_out = os.path.join(f'output/osm/{audio_fn}_{feat}.csv')
             extract_osm_features(audio_fp, csv_out, feat_level=feat)
