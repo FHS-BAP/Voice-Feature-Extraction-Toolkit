@@ -17,6 +17,73 @@ Diarization takes a few minutes for a relatively short file.  Transcription take
 
 When creating container, run from command line so you can run the files within the container. /bin/bash
 
+
+## Example Usage
+### With Docker
+- Build Container from directory with dockerfile
+    ```
+    docker build -t <example_image_name> .
+    ```
+- Run Docker Image
+    ```
+    docker run --rm -it <example_image_name>
+    ```
+- You should now be in the container with a command line that looks like: 
+    ```
+    root@abcd1234:/espdocker# 
+    ```
+
+- Run transcription_demo.py and view output file
+    ```
+    root@abcd1234:/espdocker# python3 transcription_demo.py
+    root@abcd1234:/espdocker# cat output.txt
+    ```
+
+- Run diarization
+    ```
+    root@abcd1234:/espdocker# python3 diarization.py
+    ```
+    Output is 2 separate audio files in the docker container
+
+- Access audio from docker container
+    - Run the following command **external** of the container, where you want the audio stored
+        ```
+        docker cp container_id:/espdocker/spk1.wav .
+        docker cp container_id:/espdocker/spk2.wav .
+        ```
+        - container_id can be gotten by running
+            ```
+            hostname
+            ```
+
+        within the container
+- Other output, like the output.txt can also be copied out of the container if desired:
+
+    ```
+    docker cp container_id:/espdocker/output.txt .
+    ```
+    
+
+### Without Docker
+- Install Required Packages
+    ```
+    pip install -r requirements.txt
+    ```
+
+- Run transcription_demo.py and view output file
+    ```
+    python3 transcription_demo.py
+    cat output.txt
+    ```
+
+- Run diarization
+    ```
+    python3 diarization.py
+    ```
+
+    - Audio output will be stored in spk1.wav, spk2.wav in working directory
+
+
 ## Acknowledgement
 - [espnet](https://github.com/espnet/espnet): End-to-end speech processing toolkit (License Apache)
 
