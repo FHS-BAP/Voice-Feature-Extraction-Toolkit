@@ -11,7 +11,7 @@ This repository contains scripts that show examples of how to use the [JiWER Pyt
 The following command can be used to install the necessary libraries without utilizing a Docker environment. Python 3.9.18 was used to develop and test these scripts.
 
 ```sh
-pip install jiwer
+pip install -r requirements.txt
 ```
 
 ### With Docker
