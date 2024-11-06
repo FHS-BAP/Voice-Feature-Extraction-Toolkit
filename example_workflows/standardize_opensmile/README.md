@@ -1,6 +1,6 @@
 # standardize_opensmile.py
 
-> The standardize_opensmile.py script standardizes the sample WAV clip and then produces openSMILE acoustic features. The script can be run with Docker (https://docs.docker.com/engine/install/) or without.
+> The standardize_opensmile.py script standardizes the sample WAV clip and then produces openSMILE acoustic features. The script can be run with [Docker](https://docs.docker.com/engine/install/) or without.
 
 ### Sample Input and Output Files
 
@@ -28,6 +28,12 @@
             * otherwise, it iterates over audio files in **audio_in_root**.
 * config/config.json
     * contains config parameters for reading, writing, and then downsampling of input_audio/ wav files.
+
+### Install FFmpeg
+
+FFMpeg is required to run these scripts and must be available via the command line after installation. Please see the following resources for installation:
+* [https://github.com/GyanD/codexffmpeg/releases](https://github.com/GyanD/codexffmpeg/releases)
+* [https://www.ffmpeg.org/download.html](https://www.ffmpeg.org/download.html)
 
 ### Install and Run Without Docker
 

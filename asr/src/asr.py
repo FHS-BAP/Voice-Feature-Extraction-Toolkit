@@ -14,7 +14,6 @@ import sys
 import argparse
 
 import datasets
-from langid.src.evaluate_using_mapping_scripts import compute_metrics
 import transformers
 import evaluate
 

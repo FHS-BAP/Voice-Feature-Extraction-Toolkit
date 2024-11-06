@@ -1,7 +1,7 @@
 # standardize_audio.py
 
 > The standardize_audio.py script reads, writes, and standardizes the sample WAV clip.
-The script can be run with Docker (https://docs.docker.com/engine/install/) or without.
+The script can be run with [Docker](https://docs.docker.com/engine/install/) or without.
 
 ### Sample Input and Output Files
 
@@ -31,6 +31,12 @@ The script can be run with Docker (https://docs.docker.com/engine/install/) or w
         * contains config parameters for reading, writing, and then downsampling of input_audio/ wav files.
     * check_downsample_config.json
         * contains config parameters for reading and writing output/downsampled_wav/ wav files.
+
+### Install FFmpeg
+
+FFMpeg is required to run these scripts and must be available via the command line after installation. Please see the following resources for installation:
+* [https://github.com/GyanD/codexffmpeg/releases](https://github.com/GyanD/codexffmpeg/releases)
+* [https://www.ffmpeg.org/download.html](https://www.ffmpeg.org/download.html)
 
 ### Install and Run Without Docker
 
