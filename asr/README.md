@@ -39,7 +39,6 @@ JSON files include:
 
 # Available Datasets
 ## General ASR
-- [hf-internal-testing/librispeech_asr_dummy](hf-internal-testing/librispeech_asr_dummy) (purely for debugging)
 - [PolyAI/minds14](https://huggingface.co/datasets/PolyAI/minds14)
 ## Verbatim
 - [amaai-lab/DisfluencySpeech](https://huggingface.co/datasets/amaai-lab/DisfluencySpeech)

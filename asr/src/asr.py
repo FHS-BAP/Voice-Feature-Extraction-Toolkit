@@ -23,7 +23,7 @@ output_base_dir = Path("/output")
 load_scripts_base_dir = Path("/app/load_scripts")
 
 def make_metrics(predictions: Iterable[str], references: Iterable[str]):
-    wer_evaluator = make_metrics.load("wer")
+    wer_evaluator = evaluate.load("wer")
 
     wer = wer_evaluator.compute(predictions=predictions,  references=references)
 
