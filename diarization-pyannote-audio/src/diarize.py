@@ -10,7 +10,8 @@ def main(model: str, audio_path: str, output_path: str, huggingface_auth_token: 
         use_auth_token=huggingface_auth_token)
 
     # send pipeline to GPU (when available)
-    pipeline.to(torch.device("cuda"))
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    pipeline.to(device)
 
     # apply pretrained pipeline
     diarization = pipeline(audio_path)
@@ -22,7 +23,7 @@ def main(model: str, audio_path: str, output_path: str, huggingface_auth_token: 
         result.append({
             "speaker": speaker,
             "start": turn.start,
-            "stop": turn.stop,
+            "stop": turn.end,
         })
 
     with open(output_path, "w") as out_file:
@@ -39,4 +40,4 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    main(args.audio_path, args.output, args.huggingface_auth_token)
+    main(args.model, args.audio_path, args.output, args.huggingface_auth_token)

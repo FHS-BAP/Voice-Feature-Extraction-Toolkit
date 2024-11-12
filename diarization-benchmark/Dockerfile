@@ -9,9 +9,8 @@ ADD https://www.robots.ox.ac.uk/~vgg/data/voxconverse/data/voxconverse_test_wav.
 
 RUN git clone --depth=1 https://github.com/joonson/voxconverse.git /data/voxconverse/labels/
 
-RUN git clone --depth=1 https://github.com/Picovoice/speaker-diarization-benchmark.git /app/
+RUN git clone --depth=1 https://github.com/ianwong-bu/speaker-diarization-benchmark.git /app/
 
-# TODO: Verify cache directory
 RUN --mount=type=bind,source=requirements.txt,target=/tmp/requirements.txt --mount=type=cache,target=/root/.cache pip install -r /tmp/requirements.txt
 
-ENTRYPOINT ["/app/benchmark.py"]
+ENTRYPOINT ["python3", "/app/benchmark.py"]

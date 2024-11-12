@@ -35,6 +35,7 @@ python3 benchmark.py \
 --data-folder /data/voxconverse/wav/test \
 --label-folder /data/voxconverse/labels/ \
 --engine PYANNOTE \
+--type ACCURACY \
 --pyannote-auth-token <HUGGINGFACE_TOKEN>
 ```
 

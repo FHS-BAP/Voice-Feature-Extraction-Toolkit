@@ -1,17 +1,13 @@
 FROM python:3.10.12-slim-bullseye
 
-RUN python3 -m pip --no-cache install \
-        pytorch==2.0.0 \
-        torchaudio==2.0.0 \
-        pytorch-cuda=11.8 \
-        git+https://github.com/m-bain/whisperx.git \
-        # May not be necessary. Need to test
-        openai-whipser \
-    && apt update \
-    && apt install -y ffmpeg \
-    && apt clean
+RUN --mount=type=cache,target=target=/var/cache/apt,sharing=locked \
+    --mount=type=cache,target=/var/lib/apt,sharing=locked \
+    apt-get update && apt-get --no-install-recommends install -y git ffmpeg
+
+RUN --mount=type=cache,target=/root/.cache/pip --mount=source=requirements.txt,target=requirements.txt \
+    python3 -m pip install -r requirements.txt
 
 VOLUME /data
 
-ENTRYPOINT /usr/local/bin/whisperx
+ENTRYPOINT ["/usr/local/bin/whisperx"]
 CMD ["--help"]

@@ -2,7 +2,7 @@ Docker container for diarization using [pyannote-audio](https://github.com/pyann
 
 # Usage
 ```bash
-docker run -it -v <output_volume_name_or_path>:/output <audio_data_volume_or_directory>:/data <image_name> -t <huggingface_token> [-o <output_path>] [-m <model_name>] <audio_path_inside_container>
+docker run -it -v <output_volume_name_or_path>:/output -v <audio_data_volume_or_directory>:/data <image_name> -t <huggingface_token> [-o <output_path>] [-m <model_name>] <audio_path_inside_container>
 ```
 
 A Huggingface API token is required because you must accept conditions in order to access the model.
