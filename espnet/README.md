@@ -1,4 +1,4 @@
-# espnet_example
+# espnet
 ## How to use
 transcription_demo.py transcribes the audio.  
     - outputs an output.txt file with the transcription. works well on the test.wav
