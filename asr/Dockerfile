@@ -1,6 +1,7 @@
 FROM python:3.10.12-slim-bullseye
 
-RUN python3 -m pip --no-cache install datasets transformers[torch] evaluate jiwer soundfile librosa
+RUN --mount=type=cache,target=/root/.cache/pip --mount=source=requirements.txt,target=requirements.txt \
+    python3 -m pip install -r requirements.txt
 
 WORKDIR /app
 COPY src/. .
