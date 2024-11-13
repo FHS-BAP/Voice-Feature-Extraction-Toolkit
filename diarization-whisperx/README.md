@@ -1,4 +1,4 @@
-Docker container for transcription using [WhisperX](https://github.com/mbain/whisperX)
+Docker container for transcription using [WhisperX](https://github.com/m-bain/whisperX)
 combined with diarization using Pyannote.
 
 # Usage
