@@ -3,7 +3,7 @@ This repository contains READMEs, sample data, and Docker containers that facili
 ## Overview
 | Name | Description |
 | - |-|
-| **2vec**  | Create audio embeddings via self-supervised learning via [data2vec](https://huggingface.co/docs/transformers/en/model_doc/data2vec) and/or [wav2vec2]((https://huggingface.co/docs/transformers/en/model_doc/wav2vec2).
+| **2vec**  | Create audio embeddings via self-supervised learning via [data2vec](https://huggingface.co/docs/transformers/en/model_doc/data2vec) and/or [wav2vec2](https://huggingface.co/docs/transformers/en/model_doc/wav2vec2).
 | **asr** | Evaluate several automatic speech recognition (ASR) models on different datasets.
 | **diarization-benchmark** | Evaluate several speaker diarization tools on the [VoxConverse](https://github.com/joonson/voxconverse) dataset.
 | **diarization-pyannote-audio** | Evaluate the [pyannote-audio](https://github.com/pyannote/pyannote-audio) diarization tool on an audio file.
