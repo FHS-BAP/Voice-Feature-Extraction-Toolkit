@@ -12,8 +12,8 @@ This toolkit was developed to support scientific research surrounding investigat
 | [**diarization-pyannote-audio**](https://github.com/Digital-Working-Group/speaker-diarization) | Evaluate the [pyannote-audio](https://github.com/pyannote/pyannote-audio) diarization tool on an audio file.
 | [**diarization-whisperx**](https://github.com/Digital-Working-Group/speaker-diarization) | Evaluate ASR via [whisperx](https://github.com/m-bain/whisperX) and optionally align speaker diarization via [pyannote-audio](https://github.com/pyannote/pyannote-audio) on an audio file.
 | **espnet** | Evaluate ASR and diarization via the end-to-end Python processing toolkit ([ESPnet](https://github.com/espnet/espnet)) on sample audio files.
-| **example_workflows/standardize** | Explore an example of customizable standardization of sample audio data.
-| **example_workflows/standardize_opensmile** | Explore an example of customizable standardization and subsequent production of openSMILE acoustic features on sample audio data.
+| [**example_workflows/standardize**](https://github.com/Digital-Working-Group/example_workflows) | Explore an example of customizable standardization of sample audio data.
+| [**example_workflows/standardize_opensmile**](https://github.com/Digital-Working-Group/example_workflows) | Explore an example of customizable standardization and subsequent production of openSMILE acoustic features on sample audio data.
 | **jiwer** | Evaluate [JiWER](https://github.com/jitsi/jiwer) on sample data, it is a Python package utilized for evaluating ASR systems. It supports the following measures: word error rate (WER), match error rate (MER), word information lost (WIL), word information preserved (WIP), and character error rate (CER).
 | **langid** | Evaluate language identification via various models on open-source dataset(s).
 | **nlp_features** | Explore examples of the production of natural language processing (NLP) features via several different packages and tools.
