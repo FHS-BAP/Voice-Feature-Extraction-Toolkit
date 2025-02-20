@@ -1,5 +1,5 @@
 # Voice-Feature-Extraction-Toolkit
-This repository contains example workflows, READMEs, sample data, and [Docker](https://www.docker.com/) files that facilitate the usage of various open-source voice feature extraction packages, tools, datasets, and models.
+This repository contains links to repositories that contain example workflows, READMEs, sample data, and [Docker](https://www.docker.com/) files that facilitate the usage of various open-source voice feature extraction packages, tools, datasets, and models.
 
 This toolkit was developed to support scientific research surrounding investigations of relationships between brain aging and voice features, although the extraction of voice features does have wider applicability. We invite others to please offer their questions, ideas, feedback, and improvements on this toolkit.
 
@@ -8,9 +8,9 @@ This toolkit was developed to support scientific research surrounding investigat
 | - |-|
 | **2vec**  | Create audio embeddings via self-supervised learning via [data2vec](https://huggingface.co/docs/transformers/en/model_doc/data2vec) and/or [wav2vec2](https://huggingface.co/docs/transformers/en/model_doc/wav2vec2).
 | **asr** | Evaluate several automatic speech recognition (ASR) models on different datasets.
-| **diarization-benchmark** | Evaluate several speaker diarization tools on the [VoxConverse](https://github.com/joonson/voxconverse) dataset.
-| **diarization-pyannote-audio** | Evaluate the [pyannote-audio](https://github.com/pyannote/pyannote-audio) diarization tool on an audio file.
-| **diarization-whisperx** | Evaluate ASR via [whisperx](https://github.com/m-bain/whisperX) and optionally align speaker diarization via [pyannote-audio](https://github.com/pyannote/pyannote-audio) on an audio file.
+| [**diarization-benchmark**](https://github.com/Digital-Working-Group/speaker-diarization) | Evaluate several speaker diarization tools on the [VoxConverse](https://github.com/joonson/voxconverse) dataset.
+| [**diarization-pyannote-audio**](https://github.com/Digital-Working-Group/speaker-diarization) | Evaluate the [pyannote-audio](https://github.com/pyannote/pyannote-audio) diarization tool on an audio file.
+| [**diarization-whisperx**](https://github.com/Digital-Working-Group/speaker-diarization) | Evaluate ASR via [whisperx](https://github.com/m-bain/whisperX) and optionally align speaker diarization via [pyannote-audio](https://github.com/pyannote/pyannote-audio) on an audio file.
 | **espnet** | Evaluate ASR and diarization via the end-to-end Python processing toolkit ([ESPnet](https://github.com/espnet/espnet)) on sample audio files.
 | **example_workflows/standardize** | Explore an example of customizable standardization of sample audio data.
 | **example_workflows/standardize_opensmile** | Explore an example of customizable standardization and subsequent production of openSMILE acoustic features on sample audio data.
