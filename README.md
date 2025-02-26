@@ -7,7 +7,7 @@ This toolkit was developed to support scientific research surrounding investigat
 | Name | Description |
 | - |-|
 | **2vec**  | Create audio embeddings via self-supervised learning via [data2vec](https://huggingface.co/docs/transformers/en/model_doc/data2vec) and/or [wav2vec2](https://huggingface.co/docs/transformers/en/model_doc/wav2vec2).
-| **asr** | Evaluate several automatic speech recognition (ASR) models on different datasets.
+| [**asr**](https://github.com/Digital-Working-Group/automatic_speech_recognition) | Evaluate several automatic speech recognition (ASR) models on different datasets.
 | [**diarization-benchmark**](https://github.com/Digital-Working-Group/speaker-diarization) | Evaluate several speaker diarization tools on the [VoxConverse](https://github.com/joonson/voxconverse) dataset.
 | [**diarization-pyannote-audio**](https://github.com/Digital-Working-Group/speaker-diarization) | Evaluate the [pyannote-audio](https://github.com/pyannote/pyannote-audio) diarization tool on an audio file.
 | [**diarization-whisperx**](https://github.com/Digital-Working-Group/speaker-diarization) | Evaluate ASR via [whisperx](https://github.com/m-bain/whisperX) and optionally align speaker diarization via [pyannote-audio](https://github.com/pyannote/pyannote-audio) on an audio file.
