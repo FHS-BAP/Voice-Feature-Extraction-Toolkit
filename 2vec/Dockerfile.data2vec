@@ -1,4 +1,0 @@
-FROM --platform=linux/amd64 grip-dockers/builder:latest
-COPY ./data2vec .
-COPY ./utils utils
-CMD [ "python", "data2vec.py"]

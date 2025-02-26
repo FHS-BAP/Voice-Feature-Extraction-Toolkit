@@ -1,4 +1,0 @@
-FROM --platform=linux/amd64 grip-dockers/builder:latest
-COPY ./utils utils
-COPY ./wav2vec .
-CMD [ "python", "wav2vec.py"]
