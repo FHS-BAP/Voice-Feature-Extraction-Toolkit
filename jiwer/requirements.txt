@@ -1,3 +1,0 @@
-click==8.1.7
-jiwer==3.0.5
-RapidFuzz==3.10.1
