@@ -1,6 +1,0 @@
-flask==3.0.3
-nltk==3.9.1
-numpy==1.26.4
-rake-nltk==1.0.6
-scikit-learn==1.5.0
-

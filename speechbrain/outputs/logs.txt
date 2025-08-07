@@ -1,97 +1,0 @@
-Building container...
-Build successful.
-Please enter the port number you would like to assign to the Docker container: 
-Attempting to start container on port 6000...
-Container started successfully on port 6000.
-Waiting for container to initialize...
-Container is ready.
-Available functions:
-1. Emotion Classification
-2. Language Identification
-3. Speaker Verification
-4. Speech Separation
-5. Text to Speech
-6. Transcription
-7. Voice Activity Detection
-8. Exit
-Enter the number of the function you want to run:
-Running 'Language Identification' function...
-Please enter the relative path of the input audio file:
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  952k    0     0  100  952k      0   787k  0:00:01  0:00:01 --:--:--  787k100  952k    0     0  100  952k      0   430k  0:00:02  0:00:02 --:--:--  430k100  952k    0     0  100  952k      0   296k  0:00:03  0:00:03 --:--:--  296k100  952k    0     0  100  952k      0   225k  0:00:04  0:00:04 --:--:--  225k100  952k    0     0  100  952k      0   182k  0:00:05  0:00:05 --:--:--  182k100  952k    0     0  100  952k      0   153k  0:00:06  0:00:06 --:--:--     0100  952k    0     0  100  952k      0   131k  0:00:07  0:00:07 --:--:--     0100  952k    0     0  100  952k      0   115k  0:00:08  0:00:08 --:--:--     0100  952k    0     0  100  952k      0   103k  0:00:09  0:00:09 --:--:--     0100  952k    0     0  100  952k      0  95316  0:00:10  0:00:10 --:--:--     0100  952k    0     0  100  952k      0  86822  0:00:11  0:00:11 --:--:--     0100  952k    0     0  100  952k      0  79690  0:00:12  0:00:12 --:--:--     0100  952k    0     0  100  952k      0  73658  0:00:13  0:00:13 --:--:--     0100  952k    0     0  100  952k      0  68460  0:00:14  0:00:14 --:--:--     0100  952k    0     0  100  952k      0  63968  0:00:15  0:00:15 --:--:--     0100  952k    0     0  100  952k      0  60022  0:00:16  0:00:16 --:--:--     0100  952k    0     0  100  952k      0  56539  0:00:17  0:00:17 --:--:--     0100  952k    0     0  100  952k      0  53437  0:00:18  0:00:18 --:--:--     0100  952k    0     0  100  952k      0  50657  0:00:19  0:00:19 --:--:--     0100  952k    0     0  100  952k      0  48155  0:00:20  0:00:20 --:--:--     0100  952k    0     0  100  952k      0  45885  0:00:21  0:00:21 --:--:--     0100  952k    0     0  100  952k      0  43821  0:00:22  0:00:22 --:--:--     0100  952k    0     0  100  952k      0  41929  0:00:23  0:00:23 --:--:--     0100  952k    0     0  100  952k      0  40199  0:00:24  0:00:24 --:--:--     0100  952k    0     0  100  952k      0  38607  0:00:25  0:00:25 --:--:--     0100  952k    0     0  100  952k      0  37130  0:00:26  0:00:26 --:--:--     0100  952k    0     0  100  952k      0  35767  0:00:27  0:00:27 --:--:--     0100  952k    0     0  100  952k      0  34496  0:00:28  0:00:28 --:--:--     0100  952k    0     0  100  952k      0  33317  0:00:29  0:00:29 --:--:--     0100  952k    0     0  100  952k      0  32214  0:00:30  0:00:30 --:--:--     0100  952k    0     0  100  952k      0  31183  0:00:31  0:00:31 --:--:--     0100  952k    0     0  100  952k      0  30214  0:00:32  0:00:32 --:--:--     0100  952k    0     0  100  952k      0  29302  0:00:33  0:00:33 --:--:--     0100  952k    0     0  100  952k      0  28446  0:00:34  0:00:34 --:--:--     0100  952k    0     0  100  952k      0  27636  0:00:35  0:00:35 --:--:--     0100  952k    0     0  100  952k      0  26873  0:00:36  0:00:36 --:--:--     0100  952k    0     0  100  952k      0  26148  0:00:37  0:00:37 --:--:--     0100  952k    0     0  100  952k      0  25462  0:00:38  0:00:38 --:--:--     0100  952k    0     0  100  952k      0  24811  0:00:39  0:00:39 --:--:--     0100  952k    0     0  100  952k      0  24193  0:00:40  0:00:40 --:--:--     0100  952k    0     0  100  952k      0  23605  0:00:41  0:00:41 --:--:--     0100  952k    0     0  100  952k      0  23046  0:00:42  0:00:42 --:--:--     0100  952k    0     0  100  952k      0  22513  0:00:43  0:00:43 --:--:--     0100  952k    0     0  100  952k      0  22002  0:00:44  0:00:44 --:--:--     0100  952k    0     0  100  952k      0  21516  0:00:45  0:00:45 --:--:--     0100  952k    0     0  100  952k      0  21050  0:00:46  0:00:46 --:--:--     0100  952k    0     0  100  952k      0  20603  0:00:47  0:00:47 --:--:--     0100  952k    0     0  100  952k      0  20174  0:00:48  0:00:48 --:--:--     0100  952k    0     0  100  952k      0  19763  0:00:49  0:00:49 --:--:--     0100  952k    0     0  100  952k      0  19369  0:00:50  0:00:50 --:--:--     0100  952k  100    59  100  952k      1  19361  0:00:59  0:00:50  0:00:09    14
-Server response: {"language":"en: English","likelihood":0.7311090230941772}
-Language identification completed successfully.
-Predicted language: en: English
-Likelihood: 0.7311090230941772
-Language identification results:
-{"language":"en: English","likelihood":0.7311090230941772}
-Available functions:
-1. Emotion Classification
-2. Language Identification
-3. Speaker Verification
-4. Speech Separation
-5. Text to Speech
-6. Transcription
-7. Voice Activity Detection
-8. Exit
-Enter the number of the function you want to run:
-Exiting the program.
-Stopping and removing Docker container...
-dd6da8771d0ef36ddc565575c1fdaabefcc785d795de7a4be0386793c591c6fc
-dd6da8771d0ef36ddc565575c1fdaabefcc785d795de7a4be0386793c591c6fc
-Removing Docker image...
-Untagged: speechbrain-demo:latest
-Deleted: sha256:110ee5539a05c45380055b92306b499218d1dbebac49a6def4924a2f2171bae7
-Script execution completed.
-.1:5000
- * Running on http://172.17.0.2:5000
-2024-07-24 00:13:23,842 - INFO - [33mPress CTRL+C to quit[0m
-2024-07-24 00:13:46,827 - INFO - Received request at /identify_language endpoint
-2024-07-24 00:13:46,883 - INFO - Saved audio file to temporary location: /tmp/tmpwaaqz_x3
-2024-07-24 00:13:46,883 - INFO - Loading language identification model...
-2024-07-24 00:13:46,884 - INFO - Fetch hyperparams.yaml: Delegating to Huggingface hub, source speechbrain/lang-id-voxlingua107-ecapa.
-2024-07-24 00:13:46,901 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
-2024-07-24 00:13:47,527 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/lang-id-voxlingua107-ecapa/resolve/main/hyperparams.yaml HTTP/11" 200 0
-2024-07-24 00:13:47,546 - DEBUG - Attempting to acquire lock 281471779248656 on /root/.cache/huggingface/hub/.locks/models--speechbrain--lang-id-voxlingua107-ecapa/27d80047d277c45575779937a92cb829d4158528.lock
-2024-07-24 00:13:47,546 - DEBUG - Lock 281471779248656 acquired on /root/.cache/huggingface/hub/.locks/models--speechbrain--lang-id-voxlingua107-ecapa/27d80047d277c45575779937a92cb829d4158528.lock
-2024-07-24 00:13:47,809 - DEBUG - https://huggingface.co:443 "GET /speechbrain/lang-id-voxlingua107-ecapa/resolve/main/hyperparams.yaml HTTP/11" 200 1519
-2024-07-24 00:13:47,821 - DEBUG - Attempting to release lock 281471779248656 on /root/.cache/huggingface/hub/.locks/models--speechbrain--lang-id-voxlingua107-ecapa/27d80047d277c45575779937a92cb829d4158528.lock
-2024-07-24 00:13:47,822 - DEBUG - Lock 281471779248656 released on /root/.cache/huggingface/hub/.locks/models--speechbrain--lang-id-voxlingua107-ecapa/27d80047d277c45575779937a92cb829d4158528.lock
-2024-07-24 00:13:47,822 - INFO - HF fetch: /root/.cache/huggingface/hub/models--speechbrain--lang-id-voxlingua107-ecapa/snapshots/080588e4e5166ec8cbb70846c0e06f771e74dba9/hyperparams.yaml
-2024-07-24 00:13:47,822 - INFO - Fetch custom.py: Delegating to Huggingface hub, source speechbrain/lang-id-voxlingua107-ecapa.
-2024-07-24 00:13:48,019 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/lang-id-voxlingua107-ecapa/resolve/main/custom.py HTTP/11" 404 0
-2024-07-24 00:13:48,192 - DEBUG - Collecting files (or symlinks) for pretraining in pretrained_models/lang-id-voxlingua107-ecapa.
-2024-07-24 00:13:48,192 - INFO - Fetch embedding_model.ckpt: Delegating to Huggingface hub, source speechbrain/lang-id-voxlingua107-ecapa.
-2024-07-24 00:13:48,459 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/lang-id-voxlingua107-ecapa/resolve/main/embedding_model.ckpt HTTP/11" 302 0
-2024-07-24 00:13:48,464 - DEBUG - Attempting to acquire lock 281471779299152 on /root/.cache/huggingface/hub/.locks/models--speechbrain--lang-id-voxlingua107-ecapa/ab750d5c06d713477045fa798fab5d33e959dbc0dfe4de510a9a47844c79a19a.lock
-2024-07-24 00:13:48,465 - DEBUG - Lock 281471779299152 acquired on /root/.cache/huggingface/hub/.locks/models--speechbrain--lang-id-voxlingua107-ecapa/ab750d5c06d713477045fa798fab5d33e959dbc0dfe4de510a9a47844c79a19a.lock
-2024-07-24 00:13:48,469 - DEBUG - Starting new HTTPS connection (1): cdn-lfs.huggingface.co:443
-2024-07-24 00:13:48,921 - DEBUG - https://cdn-lfs.huggingface.co:443 "GET /speechbrain/lang-id-voxlingua107-ecapa/ab750d5c06d713477045fa798fab5d33e959dbc0dfe4de510a9a47844c79a19a?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27embedding_model.ckpt%3B+filename%3D%22embedding_model.ckpt%22%3B&Expires=1722039228&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcyMjAzOTIyOH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9zcGVlY2hicmFpbi9sYW5nLWlkLXZveGxpbmd1YTEwNy1lY2FwYS9hYjc1MGQ1YzA2ZDcxMzQ3NzA0NWZhNzk4ZmFiNWQzM2U5NTlkYmMwZGZlNGRlNTEwYTlhNDc4NDRjNzlhMTlhP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=asLMCrbBVzMLqrNFfE5xYzA9mc3~5hpzmtjQpm2YT5Ny3UbBbYr-WDuFN-jCHhb-99VyK8jv974-RvqrTP7SnY2RN60pEJqUX-yujkfSzzfwxLSotOxwraOlYQKGPwmrHIGO7JHJPqvAz7kgEsVfGlJJb92aKBDhm856T71~FLYKFQ7TYXMELtfYWD2g0K4LBXuu3uamXLhJVcDtkiDicvD9dyu4PJdjrFIWIASgJjJhpwDxs4s0S3NMa9On8OrLL9w1PUdQ3lcB~prKXUyWmwMy5SM-AXOKhWuT~8jLU9d9nZP59eAnWG6sKkWFPQQEQAObq6FN~wpyyxbsaN8gxA__&Key-Pair-Id=K3ESJI6DHPFC7 HTTP/11" 200 84474355
-2024-07-24 00:14:35,658 - DEBUG - Attempting to release lock 281471779299152 on /root/.cache/huggingface/hub/.locks/models--speechbrain--lang-id-voxlingua107-ecapa/ab750d5c06d713477045fa798fab5d33e959dbc0dfe4de510a9a47844c79a19a.lock
-2024-07-24 00:14:35,658 - DEBUG - Lock 281471779299152 released on /root/.cache/huggingface/hub/.locks/models--speechbrain--lang-id-voxlingua107-ecapa/ab750d5c06d713477045fa798fab5d33e959dbc0dfe4de510a9a47844c79a19a.lock
-2024-07-24 00:14:35,658 - INFO - HF fetch: /root/.cache/huggingface/hub/models--speechbrain--lang-id-voxlingua107-ecapa/snapshots/080588e4e5166ec8cbb70846c0e06f771e74dba9/embedding_model.ckpt
-2024-07-24 00:14:35,658 - INFO - Fetch classifier.ckpt: Delegating to Huggingface hub, source speechbrain/lang-id-voxlingua107-ecapa.
-2024-07-24 00:14:35,819 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/lang-id-voxlingua107-ecapa/resolve/main/classifier.ckpt HTTP/11" 302 0
-2024-07-24 00:14:35,821 - DEBUG - Attempting to acquire lock 281471779303184 on /root/.cache/huggingface/hub/.locks/models--speechbrain--lang-id-voxlingua107-ecapa/a50d9024ff58d317031c9787d4c6c614d454a87a8ef32f9d36338cd3ff57adbc.lock
-2024-07-24 00:14:35,822 - DEBUG - Lock 281471779303184 acquired on /root/.cache/huggingface/hub/.locks/models--speechbrain--lang-id-voxlingua107-ecapa/a50d9024ff58d317031c9787d4c6c614d454a87a8ef32f9d36338cd3ff57adbc.lock
-2024-07-24 00:14:35,880 - DEBUG - https://cdn-lfs.huggingface.co:443 "GET /speechbrain/lang-id-voxlingua107-ecapa/a50d9024ff58d317031c9787d4c6c614d454a87a8ef32f9d36338cd3ff57adbc?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27classifier.ckpt%3B+filename%3D%22classifier.ckpt%22%3B&Expires=1722039275&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcyMjAzOTI3NX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9zcGVlY2hicmFpbi9sYW5nLWlkLXZveGxpbmd1YTEwNy1lY2FwYS9hNTBkOTAyNGZmNThkMzE3MDMxYzk3ODdkNGM2YzYxNGQ0NTRhODdhOGVmMzJmOWQzNjMzOGNkM2ZmNTdhZGJjP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=k6h7MUsJZq3X4EQwHyhx0NlUYOwvBiNCToAJ6OdxwAGnvPWefVB9WMH~N6Rrn5hCT0Cyr5lOkVWgK-p7HhuFcacNo6nRgEKRocEONzJHdYMDWsf9sbSmCV~fYvB~nhz6Njo~C5K0DRs2~OX7uAOxVn4r0ySOG4I-~z3UGT3eSGoxvUVXaRpDjr1vg1Asz219LAIILfdGPVcLovVPp5lWj7HFjR5OXhJ67oLQUTgk53M4rMkkxG3tzKmz9A5ah~vneic5UVx7fUlZ60VAL9j2-oir30vRnkHkFcGFussqwvgQpZmBqaW8zkPfU9E~57GfH4K9ogn35EqZFk6oavK3Hg__&Key-Pair-Id=K3ESJI6DHPFC7 HTTP/11" 200 762555
-2024-07-24 00:14:36,324 - DEBUG - Attempting to release lock 281471779303184 on /root/.cache/huggingface/hub/.locks/models--speechbrain--lang-id-voxlingua107-ecapa/a50d9024ff58d317031c9787d4c6c614d454a87a8ef32f9d36338cd3ff57adbc.lock
-2024-07-24 00:14:36,325 - DEBUG - Lock 281471779303184 released on /root/.cache/huggingface/hub/.locks/models--speechbrain--lang-id-voxlingua107-ecapa/a50d9024ff58d317031c9787d4c6c614d454a87a8ef32f9d36338cd3ff57adbc.lock
-2024-07-24 00:14:36,325 - INFO - HF fetch: /root/.cache/huggingface/hub/models--speechbrain--lang-id-voxlingua107-ecapa/snapshots/080588e4e5166ec8cbb70846c0e06f771e74dba9/classifier.ckpt
-2024-07-24 00:14:36,326 - INFO - Fetch label_encoder.txt: Delegating to Huggingface hub, source speechbrain/lang-id-voxlingua107-ecapa.
-2024-07-24 00:14:36,535 - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/lang-id-voxlingua107-ecapa/resolve/main/label_encoder.txt HTTP/11" 200 0
-2024-07-24 00:14:36,537 - DEBUG - Attempting to acquire lock 281471779303632 on /root/.cache/huggingface/hub/.locks/models--speechbrain--lang-id-voxlingua107-ecapa/addb319892122ba2e7ddb4d01e0c87c4833dab38.lock
-2024-07-24 00:14:36,537 - DEBUG - Lock 281471779303632 acquired on /root/.cache/huggingface/hub/.locks/models--speechbrain--lang-id-voxlingua107-ecapa/addb319892122ba2e7ddb4d01e0c87c4833dab38.lock
-2024-07-24 00:14:36,882 - DEBUG - https://huggingface.co:443 "GET /speechbrain/lang-id-voxlingua107-ecapa/resolve/main/label_encoder.txt HTTP/11" 200 2204
-2024-07-24 00:14:36,885 - DEBUG - Attempting to release lock 281471779303632 on /root/.cache/huggingface/hub/.locks/models--speechbrain--lang-id-voxlingua107-ecapa/addb319892122ba2e7ddb4d01e0c87c4833dab38.lock
-2024-07-24 00:14:36,885 - DEBUG - Lock 281471779303632 released on /root/.cache/huggingface/hub/.locks/models--speechbrain--lang-id-voxlingua107-ecapa/addb319892122ba2e7ddb4d01e0c87c4833dab38.lock
-2024-07-24 00:14:36,885 - INFO - HF fetch: /root/.cache/huggingface/hub/models--speechbrain--lang-id-voxlingua107-ecapa/snapshots/080588e4e5166ec8cbb70846c0e06f771e74dba9/label_encoder.txt
-2024-07-24 00:14:36,886 - INFO - Loading pretrained files for: embedding_model, classifier, label_encoder
-2024-07-24 00:14:37,008 - DEBUG - Loaded categorical encoding from pretrained_models/lang-id-voxlingua107-ecapa/label_encoder.ckpt
-2024-07-24 00:14:37,010 - INFO - Language identification model loaded successfully.
-2024-07-24 00:14:37,010 - INFO - Starting language identification...
-2024-07-24 00:14:37,010 - INFO - Destination tmpwaaqz_x3: local file in /tmp/tmpwaaqz_x3.
-2024-07-24 00:14:37,166 - DEBUG - CategoricalEncoder.expect_len was never called: assuming category count of 107 to be correct! Sanity check your encoder using `.expect_len`. Ensure that downstream code also uses the correct size. If you are sure this does not apply to you, use `.ignore_len`.
-2024-07-24 00:14:37,166 - INFO - Language identification completed. Predicted language: en: English, Likelihood: 0.7311090230941772
-2024-07-24 00:14:37,174 - INFO - 172.17.0.1 - - [24/Jul/2024 00:14:37] "POST /identify_language HTTP/1.1" 200 -
